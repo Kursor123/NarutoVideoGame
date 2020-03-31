@@ -407,10 +407,22 @@ def DrawWindow(objects):
 run = True
 objects.append(Hero(narutoImg))
 enemiesCounter = 0
+bodiesCounter = 0
+
 
 while run:
     clock.tick(30)
     enemiesCounter += 1
+    bodiesCounter += 1
+    if bodiesCounter == 1800:
+        i = 0
+        while i < len(objects):
+            if objects[i].isDead:
+                objects[i] = objects[-1]
+                objects.pop()
+            if i < len(objects) and not objects[i].isDead:
+                i += 1
+        bodiesCounter = 0
     if enemiesCounter == 200:
        objects.append(Bot(enemyImg))
        enemiesCounter = 0
