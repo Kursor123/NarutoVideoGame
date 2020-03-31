@@ -6,7 +6,7 @@ pygame.init()
 clock = pygame.time.Clock()
 random.seed()
 FONTS = pygame.font.get_fonts()
-usedFont = pygame.font.Font(pygame.font.match_font(FONTS[6]), 36)
+usedFont = pygame.font.Font(pygame.font.match_font(FONTS[6]), 24)
 
 sizeX = 504
 sizeY = 350
@@ -41,6 +41,7 @@ class Hero:
         self.friendly = friendly
         self.hp = 300
         self.isDead = False
+        self.deadCount = 0
         self.underAttack = False
         self.uaCount = 0
 
@@ -116,14 +117,16 @@ class Hero:
 
     def animate(self):
         global win
-        if self.isDead:
-            win.blit(self.pictures['dead'], (self.x, self.y))
-            return
         pygame.draw.rect(win, (255, 0, 0), (20, 20, 300, 10))
-        pygame.draw.rect(win, (0, 255, 0), (20, 20, self.hp, 10))
+        if not self.isDead:
+            pygame.draw.rect(win, (0, 255, 0), (20, 20, self.hp, 10))
         pygame.draw.rect(win, (0, 0, 0), (20, 20, 300, 10), 1)
         if self.isLeft:
-            if self.isAttacking:
+            if self.isDead:
+                win.blit(self.pictures['deadL'][self.deadCount // 6], (self.x + (self.deadCount // 6) * 15, self.y + (self.deadCount // 6) * 10))
+                if self.deadCount < 29:
+                    self.deadCount += 1
+            elif self.isAttacking:
                 win.blit(self.pictures['attackL'][self.attackType][self.attackCount // 2], (self.x, self.y))
             elif self.isJump:
                 win.blit(self.pictures['jumpL'][(self.jumpCount + 10) // 7], (self.x, self.y))
@@ -136,7 +139,11 @@ class Hero:
                 self.animCount += 1
                 self.animCount %= 30
         else:
-            if self.isAttacking:
+            if self.isDead:
+                win.blit(self.pictures['deadR'][self.deadCount // 6], (self.x - (self.deadCount // 6) * 15, self.y + (self.deadCount // 6) * 10))
+                if self.deadCount < 29:
+                    self.deadCount += 1
+            elif self.isAttacking:
                 win.blit(self.pictures['attackR'][self.attackType][self.attackCount // 2], (self.x, self.y))
             elif self.isJump:
                 win.blit(self.pictures['jumpR'][(self.jumpCount + 10) // 7], (self.x, self.y))
@@ -366,11 +373,20 @@ imgPlayerAttackLeft = [[pygame.image.load('img\\naruto_light_attack_left\\naruto
                         pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_2.png'),
                         pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_3.png'),
                         pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_4.png')]]
-imgDead = pygame.image.load('img/dead.png')
+imgPlayerDeadLeft = [pygame.image.load('img/naruto_under_attack_left/naruto_under_attack_left_1.png'),
+                     pygame.image.load('img/naruto_under_attack_left/naruto_under_attack_left_2.png'),
+                     pygame.image.load('img/naruto_under_attack_left/naruto_under_attack_left_3.png'),
+                     pygame.image.load('img/naruto_under_attack_left/naruto_under_attack_left_4.png'),
+                     pygame.image.load('img/naruto_under_attack_left/naruto_under_attack_left_5.png')]
+imgPlayerDeadRight = [pygame.image.load('img/naruto_under_attack_right/naruto_under_attack_right_1.png'),
+                      pygame.image.load('img/naruto_under_attack_right/naruto_under_attack_right_2.png'),
+                      pygame.image.load('img/naruto_under_attack_right/naruto_under_attack_right_3.png'),
+                      pygame.image.load('img/naruto_under_attack_right/naruto_under_attack_right_4.png'),
+                      pygame.image.load('img/naruto_under_attack_right/naruto_under_attack_right_5.png')]
 narutoImg = {'runR': imgPlayerWalkRight, 'runL': imgPlayerWalkLeft, 'idleR': imgPlayerStandRight,
              'idleL': imgPlayerStandLeft,
              'jumpR': imgPlayerJumpRight, 'jumpL': imgPlayerJumpLeft, 'attackR': imgPlayerAttackRight,
-             'attackL': imgPlayerAttackLeft, 'dead': imgDead}
+             'attackL': imgPlayerAttackLeft, 'deadL': imgPlayerDeadLeft, 'deadR': imgPlayerDeadRight}
 
 imgSNWalkRight = [pygame.image.load('img/enemy_run_right/enemy_run_right_1.png'),
                       pygame.image.load('img/enemy_run_right/enemy_run_right_2.png'),
@@ -418,11 +434,11 @@ imgSNUnderAttackRight = [pygame.image.load('img/enemy_under_attack_right/enemy_u
                         pygame.image.load('img/enemy_under_attack_right/enemy_under_attack_right_2.png')]
 imgSNDeadLeft = pygame.image.load('img/enemy_under_attack_left/enemy_under_attack_left_4.png')
 imgSNDeadRight = pygame.image.load('img/enemy_under_attack_right/enemy_under_attack_right_4.png')
-
 enemyImg = {'runR': imgSNWalkRight, 'runL': imgSNWalkLeft, 'idleR': imgSNStandRight,
             'idleL': imgSNStandLeft, 'jumpR': imgSNStandRight, 'jumpL': imgSNStandLeft,
             'attackR': imgSNAttackRight, 'attackL': imgSNAttackLeft, 'deadL': imgSNDeadLeft,
             'deadR': imgSNDeadRight, 'und_atL': imgSNUnderAttackLeft, 'und_atR': imgSNUnderAttackRight}
+
 imgBackground = pygame.image.load('img/background_konoha.png')
 
 
@@ -431,6 +447,8 @@ def DrawWindow(objects):
     for obj in objects:
         obj.animate()
     win.blit(usedFont.render('Score: ' + str(score), 0, (0, 0, 0)), (20, 40))
+    if objects[0].isDead:
+        win.blit(usedFont.render('GAME OVER! Press ESC to quit', 0, (0, 0, 0)), (100, 90))
     pygame.display.update()
 
 
@@ -446,7 +464,7 @@ while run:
     if bodiesCounter == 900:
         i = 0
         while i < len(objects):
-            if objects[i].isDead:
+            if objects[i].isDead and i > 0:
                 objects[i] = objects[-1]
                 objects.pop()
             if i < len(objects) and not objects[i].isDead:
