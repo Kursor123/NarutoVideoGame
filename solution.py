@@ -34,8 +34,12 @@ class Hero:
         self.attackCount = 0
         self.attackType = 0
         self.friendly = friendly
+        self.hp = 300
+        self.isDead = False
 
     def act(self):
+        if self.isDead:
+            return
         keys = pygame.key.get_pressed()
         if not self.isAttacking:
             if keys[pygame.K_j]:
@@ -44,6 +48,10 @@ class Hero:
                 self.isAttacking = True
         else:
             self.attackCount += 1
+            if self.attackCount == 4:
+                for obj in objects:
+                    if obj.friendly != self.friendly and self.collide(obj):
+                        obj.damage(10 * (self.attackType + 1))
             if self.attackCount == 8:
                 if keys[pygame.K_j]:
                     self.attackType += 1
@@ -77,8 +85,30 @@ class Hero:
                 self.jumpCount = 10
                 self.isJump = False
 
+    def damage(self, dmg):
+        self.hp -= dmg
+        if self.hp <= 0:
+            self.isDead = True
+
+    def collide(self, obj):
+        if obj.isDead:
+            return
+        x = self.x
+        y = self.y
+        res = obj.x <= x <= obj.x + obj.width and obj.y <= y <= obj.y + obj.height
+        x += self.width
+        res |= obj.x <= x <= obj.x + obj.width and obj.y <= y <= obj.y + obj.height
+        y += self.height
+        res |= obj.x <= x <= obj.x + obj.width and obj.y <= y <= obj.y + obj.height
+        x -= self.width
+        res |= obj.x <= x <= obj.x + obj.width and obj.y <= y <= obj.y + obj.height
+        return res
+
     def animate(self):
         global win
+        if self.isDead:
+            win.blit(self.pictures['dead'], (self.x, self.y))
+            return
         if self.isLeft:
             if self.isAttacking:
                 win.blit(self.pictures['attackL'][self.attackType][self.attackCount // 2], (self.x, self.y))
@@ -126,19 +156,25 @@ class Bot:
         self.attackType = 0
         self.friendly = friendly
         self.isTargetChosen = False
+        self.hp = 50
+        self.isDead = False
 
     def chooseTarget(self):
         if self.isTargetChosen:
+            if self.target.isDead:
+                self.isTargetChosen = False
             return
         enemies = []
         for obj in objects:
-            if (self.friendly != obj.friendly):
+            if self.friendly != obj.friendly and not obj.isDead:
                 enemies.append(obj)
         if len(enemies):
             self.isTargetChosen = True
             self.target = enemies[random.randint(0, len(enemies) - 1)]
 
     def collide(self, obj):
+        if obj.isDead:
+            return
         x = self.x
         y = self.y
         res = obj.x <= x <= obj.x + obj.width and obj.y <= y <= obj.y + obj.height
@@ -151,6 +187,8 @@ class Bot:
         return res
 
     def act(self):
+        if(self.isDead):
+            return
         self.chooseTarget()
         atProb = random.randint(1, 100) <= 5
         if not self.isAttacking:
@@ -160,6 +198,8 @@ class Bot:
                 self.isAttacking = True
         else:
             self.attackCount += 1
+            if(self.attackCount == 4):
+                self.target.damage(10 * (self.attackType + 1))
             if self.attackCount == 8:
                 if self.isTargetChosen and self.collide(self.target):
                     self.attackType += 1
@@ -171,6 +211,9 @@ class Bot:
                     self.isAttacking = False
                     self.attackCount = 0
                     self.attackType = 0
+        if not self.isTargetChosen:
+            self.isIdle = True
+            return
         if self.collide(self.target):
             self.isLeft = self.x >= self.target.x
             self.isIdle = True
@@ -183,8 +226,16 @@ class Bot:
             self.isLeft = True
             self.isIdle = False
 
+    def damage(self, dmg):
+        self.hp -= dmg
+        if self.hp <= 0:
+            self.isDead = True
+
     def animate(self):
         global win
+        if self.isDead:
+            win.blit(self.pictures['dead'], (self.x, self.y))
+            return
         if self.isLeft:
             if self.isAttacking:
                 win.blit(self.pictures['attackL'][self.attackType][self.attackCount // 2], (self.x, self.y))
@@ -251,31 +302,28 @@ imgPlayerJumpLeft = [  # pygame.image.load('img/naruto_jump_left/naruto_jump_lef
 imgPlayerAttackRight = [[pygame.image.load('img\\naruto_light_attack_right\\naruto_light_attack_right_1.png'),
                          pygame.image.load('img\\naruto_light_attack_right\\naruto_light_attack_right_2.png'),
                          pygame.image.load('img\\naruto_light_attack_right\\naruto_light_attack_right_3.png'),
-                         pygame.image.load('img\\naruto_light_attack_right\\naruto_light_attack_right_4.png')],
-                        [pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_1.png'),
+                         pygame.image.load('img\\naruto_light_attack_right\\naruto_light_attack_right_4.png')], [pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_1.png'),
                          pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_2.png'),
                          pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_3.png'),
-                         pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_4.png')],
-                        [pygame.image.load('img\\naruto_heavy_attack_right\\naruto_heavy_attack_right_1.png'),
+                         pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_4.png')], [pygame.image.load('img\\naruto_heavy_attack_right\\naruto_heavy_attack_right_1.png'),
                          pygame.image.load('img\\naruto_heavy_attack_right\\naruto_heavy_attack_right_2.png'),
                          pygame.image.load('img\\naruto_heavy_attack_right\\naruto_heavy_attack_right_3.png'),
                          pygame.image.load('img\\naruto_heavy_attack_right\\naruto_heavy_attack_right_4.png')]]
 imgPlayerAttackLeft = [[pygame.image.load('img\\naruto_light_attack_left\\naruto_light_attack_left_1.png'),
                         pygame.image.load('img\\naruto_light_attack_left\\naruto_light_attack_left_2.png'),
                         pygame.image.load('img\\naruto_light_attack_left\\naruto_light_attack_left_3.png'),
-                        pygame.image.load('img\\naruto_light_attack_left\\naruto_light_attack_left_4.png')],
-                       [pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_1.png'),
+                        pygame.image.load('img\\naruto_light_attack_left\\naruto_light_attack_left_4.png')], [pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_1.png'),
                         pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_2.png'),
                         pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_3.png'),
-                        pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_4.png')],
-                       [pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_1.png'),
+                        pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_4.png')], [pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_1.png'),
                         pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_2.png'),
                         pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_3.png'),
                         pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_4.png')]]
+imgDead = pygame.image.load('img/dead.png')
 narutoImg = {'runR': imgPlayerWalkRight, 'runL': imgPlayerWalkLeft, 'idleR': imgPlayerStandRight,
              'idleL': imgPlayerStandLeft,
              'jumpR': imgPlayerJumpRight, 'jumpL': imgPlayerJumpLeft, 'attackR': imgPlayerAttackRight,
-             'attackL': imgPlayerAttackLeft}
+             'attackL': imgPlayerAttackLeft, 'dead': imgDead}
 imgBackground = pygame.image.load('img/background_konoha.png')
 
 
@@ -288,15 +336,14 @@ def DrawWindow(objects):
 
 run = True
 objects.append(Hero(narutoImg))
-objects.append(Bot(narutoImg))
 enemiesCounter = 0
 
 while run:
     clock.tick(30)
-    #enemiesCounter += 1
-    #if enemiesCounter == 100:
-        #objects.append(Bot(narutoImg))
-        #enemiesCounter = 0
+    enemiesCounter += 1
+    if enemiesCounter == 200:
+       objects.append(Bot(narutoImg))
+       enemiesCounter = 0
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
