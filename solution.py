@@ -1,6 +1,7 @@
 import pygame
 import random
 
+#pygame.mixer.pre_init(44100, 16, 2, 4096)
 pygame.init()
 clock = pygame.time.Clock()
 random.seed()
@@ -10,6 +11,7 @@ sizeY = 350
 speed = 7
 botSpeed = 5
 objects = []
+sound = {'hit': pygame.mixer.Sound('sound/hit.wav'), 'punch': pygame.mixer.Sound('sound/punch.wav')}
 
 win = pygame.display.set_mode((sizeX, sizeY))
 pygame.display.set_caption('Naruto Shippuden Video Game')
@@ -47,6 +49,8 @@ class Hero:
                 self.attackType = 0
                 self.isAttacking = True
         else:
+            if (self.attackCount == 0):
+                sound['punch'].play()
             self.attackCount += 1
             if self.attackCount == 4:
                 for obj in objects:
@@ -87,6 +91,7 @@ class Hero:
 
     def damage(self, dmg):
         self.hp -= dmg
+        sound['hit'].play()
         if self.hp <= 0:
             self.isDead = True
 
@@ -109,6 +114,9 @@ class Hero:
         if self.isDead:
             win.blit(self.pictures['dead'], (self.x, self.y))
             return
+        pygame.draw.rect(win, (255, 0, 0), (20, 20, 300, 10))
+        pygame.draw.rect(win, (0, 255, 0), (20, 20, self.hp, 10))
+        pygame.draw.rect(win, (0, 0, 0), (20, 20, 300, 10), 1)
         if self.isLeft:
             if self.isAttacking:
                 win.blit(self.pictures['attackL'][self.attackType][self.attackCount // 2], (self.x, self.y))
@@ -141,7 +149,7 @@ class Hero:
 class Bot:
     def __init__(self, pictures, friendly=False):
         self.width = 43
-        self.height = 58
+        self.height = 58 if friendly else 43
         self.x = 250 + (2 * random.randint(0, 1) - 1) * 300
         self.y = sizeY - self.height - 15
         self.isIdle = True
@@ -197,6 +205,8 @@ class Bot:
                 self.attackType = 0
                 self.isAttacking = True
         else:
+            if(self.attackCount == 0):
+                sound['punch'].play()
             self.attackCount += 1
             if(self.attackCount == 4):
                 self.target.damage(10 * (self.attackType + 1))
@@ -225,16 +235,27 @@ class Bot:
             self.x -= (botSpeed + 2 * random.randint(0, 1) - 1)
             self.isLeft = True
             self.isIdle = False
+        jumpProb = random.randint(1, 100) <= 3
+        if self.isTargetChosen and not self.isJump and jumpProb:
+            self.isJump = True
+        if self.isJump:
+            if self.jumpCount >= -10:
+                self.y -= self.jumpCount
+                self.jumpCount -= 1
+            else:
+                self.jumpCount = 10
+                self.isJump = False
 
     def damage(self, dmg):
         self.hp -= dmg
+        sound['hit'].play()
         if self.hp <= 0:
             self.isDead = True
 
     def animate(self):
         global win
         if self.isDead:
-            win.blit(self.pictures['dead'], (self.x, self.y + self.height - 15))
+            win.blit(self.pictures['dead'], (self.x, sizeY - self.height + 15))
             return
         if self.isLeft:
             if self.isAttacking:
