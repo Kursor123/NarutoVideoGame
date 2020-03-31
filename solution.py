@@ -1,15 +1,18 @@
 import pygame
 import random
 
-#pygame.mixer.pre_init(44100, 16, 2, 4096)
+
 pygame.init()
 clock = pygame.time.Clock()
 random.seed()
+FONTS = pygame.font.get_fonts()
+usedFont = pygame.font.Font(pygame.font.match_font(FONTS[6]), 36)
 
 sizeX = 504
 sizeY = 350
 speed = 7
 botSpeed = 5
+score = 0
 objects = []
 sound = {'hit': pygame.mixer.Sound('sound/hit.wav'), 'punch': pygame.mixer.Sound('sound/punch.wav')}
 
@@ -38,6 +41,8 @@ class Hero:
         self.friendly = friendly
         self.hp = 300
         self.isDead = False
+        self.underAttack = False
+        self.uaCount = 0
 
     def act(self):
         if self.isDead:
@@ -166,6 +171,8 @@ class Bot:
         self.isTargetChosen = False
         self.hp = 50
         self.isDead = False
+        self.underAttack = False
+        self.uaCount = 0
 
     def chooseTarget(self):
         if self.isTargetChosen:
@@ -249,17 +256,27 @@ class Bot:
     def damage(self, dmg):
         self.hp -= dmg
         sound['hit'].play()
+        self.underAttack = True
         if self.hp <= 0:
+            global score
+            if not self.friendly:
+                score += 10
             self.isDead = True
 
     def animate(self):
         global win
-        if self.isDead:
-            win.blit(self.pictures['dead'], (self.x, sizeY - self.height + 15))
-            return
         if self.isLeft:
+            if self.isDead:
+                win.blit(self.pictures['deadL'], (self.x, sizeY - self.height + 15))
+                return
             if self.isAttacking:
                 win.blit(self.pictures['attackL'][self.attackType][self.attackCount // 2], (self.x, self.y))
+            elif self.underAttack:
+                win.blit(self.pictures['und_atL'][self.uaCount // 10], (self.x, self.y))
+                self.uaCount += 1
+                if self.uaCount == 20:
+                    self.uaCount = 0
+                    self.underAttack = False
             elif self.isJump:
                 win.blit(self.pictures['jumpL'][(self.jumpCount + 10) // 7], (self.x, self.y))
             elif self.isIdle:
@@ -271,8 +288,17 @@ class Bot:
                 self.animCount += 1
                 self.animCount %= 30
         else:
+            if self.isDead:
+                win.blit(self.pictures['deadR'], (self.x, sizeY - self.height + 15))
+                return
             if self.isAttacking:
                 win.blit(self.pictures['attackR'][self.attackType][self.attackCount // 2], (self.x, self.y))
+            elif self.underAttack:
+                win.blit(self.pictures['und_atR'][self.uaCount // 10], (self.x, self.y))
+                self.uaCount += 1
+                if self.uaCount == 20:
+                    self.uaCount = 0
+                    self.underAttack = False
             elif self.isJump:
                 win.blit(self.pictures['jumpR'][(self.jumpCount + 10) // 7], (self.x, self.y))
             elif self.isIdle:
@@ -369,31 +395,34 @@ imgSNStandLeft = [pygame.image.load('img/enemy_stand_left/enemy_stand_left_1.png
 imgSNAttackRight = [[pygame.image.load('img/enemy_attack_right/enemy_attack_right_1.png'),
                      pygame.image.load('img/enemy_attack_right/enemy_attack_right_2.png'),
                      pygame.image.load('img/enemy_attack_right/enemy_attack_right_3.png'),
-                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_4.png')],
-                    [pygame.image.load('img/enemy_attack_right/enemy_attack_right_5.png'),
+                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_4.png')], [pygame.image.load('img/enemy_attack_right/enemy_attack_right_5.png'),
                      pygame.image.load('img/enemy_attack_right/enemy_attack_right_6.png'),
                      pygame.image.load('img/enemy_attack_right/enemy_attack_right_7.png'),
-                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_8.png')],
-                    [pygame.image.load('img/enemy_knife_attack_right/enemy_knife_attack_right_1.png'),
+                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_8.png')], [pygame.image.load('img/enemy_knife_attack_right/enemy_knife_attack_right_1.png'),
                      pygame.image.load('img/enemy_knife_attack_right/enemy_knife_attack_right_2.png'),
                      pygame.image.load('img/enemy_knife_attack_right/enemy_knife_attack_right_3.png'),
                      pygame.image.load('img/enemy_knife_attack_right/enemy_knife_attack_right_4.png')]]
 imgSNAttackLeft = [[pygame.image.load('img/enemy_attack_left/enemy_attack_left_1.png'),
                      pygame.image.load('img/enemy_attack_left/enemy_attack_left_2.png'),
                      pygame.image.load('img/enemy_attack_left/enemy_attack_left_3.png'),
-                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_4.png')],
-                    [pygame.image.load('img/enemy_attack_left/enemy_attack_left_5.png'),
+                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_4.png')], [pygame.image.load('img/enemy_attack_left/enemy_attack_left_5.png'),
                      pygame.image.load('img/enemy_attack_left/enemy_attack_left_6.png'),
                      pygame.image.load('img/enemy_attack_left/enemy_attack_left_7.png'),
-                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_8.png')],
-                    [pygame.image.load('img/enemy_knife_attack_left/enemy_knife_attack_left_1.png'),
+                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_8.png')], [pygame.image.load('img/enemy_knife_attack_left/enemy_knife_attack_left_1.png'),
                      pygame.image.load('img/enemy_knife_attack_left/enemy_knife_attack_left_2.png'),
                      pygame.image.load('img/enemy_knife_attack_left/enemy_knife_attack_left_3.png'),
                      pygame.image.load('img/enemy_knife_attack_left/enemy_knife_attack_left_4.png')]]
+imgSNUnderAttackLeft = [pygame.image.load('img/enemy_under_attack_left/enemy_under_attack_left_1.png'),
+                        pygame.image.load('img/enemy_under_attack_left/enemy_under_attack_left_2.png')]
+imgSNUnderAttackRight = [pygame.image.load('img/enemy_under_attack_right/enemy_under_attack_right_1.png'),
+                        pygame.image.load('img/enemy_under_attack_right/enemy_under_attack_right_2.png')]
+imgSNDeadLeft = pygame.image.load('img/enemy_under_attack_left/enemy_under_attack_left_4.png')
+imgSNDeadRight = pygame.image.load('img/enemy_under_attack_right/enemy_under_attack_right_4.png')
+
 enemyImg = {'runR': imgSNWalkRight, 'runL': imgSNWalkLeft, 'idleR': imgSNStandRight,
-             'idleL': imgSNStandLeft,
-             'jumpR': imgSNStandRight, 'jumpL': imgSNStandLeft, 'attackR': imgSNAttackRight,
-             'attackL': imgSNAttackLeft, 'dead': pygame.image.load('img/enemy_under_attack_left/enemy_under_attack_left_4.png')}
+            'idleL': imgSNStandLeft, 'jumpR': imgSNStandRight, 'jumpL': imgSNStandLeft,
+            'attackR': imgSNAttackRight, 'attackL': imgSNAttackLeft, 'deadL': imgSNDeadLeft,
+            'deadR': imgSNDeadRight, 'und_atL': imgSNUnderAttackLeft, 'und_atR': imgSNUnderAttackRight}
 imgBackground = pygame.image.load('img/background_konoha.png')
 
 
@@ -401,6 +430,7 @@ def DrawWindow(objects):
     win.blit(imgBackground, (0, 0))
     for obj in objects:
         obj.animate()
+    win.blit(usedFont.render('Score: ' + str(score), 0, (0, 0, 0)), (20, 40))
     pygame.display.update()
 
 
@@ -409,12 +439,11 @@ objects.append(Hero(narutoImg))
 enemiesCounter = 0
 bodiesCounter = 0
 
-
 while run:
     clock.tick(30)
     enemiesCounter += 1
     bodiesCounter += 1
-    if bodiesCounter == 1800:
+    if bodiesCounter == 900:
         i = 0
         while i < len(objects):
             if objects[i].isDead:
@@ -423,7 +452,7 @@ while run:
             if i < len(objects) and not objects[i].isDead:
                 i += 1
         bodiesCounter = 0
-    if enemiesCounter == 200:
+    if enemiesCounter == 70:
        objects.append(Bot(enemyImg))
        enemiesCounter = 0
     for event in pygame.event.get():
