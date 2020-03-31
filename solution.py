@@ -212,7 +212,7 @@ class Bot:
                     self.attackCount = 0
                     self.attackType = 0
         if not self.isTargetChosen:
-            self.isIdle = True
+            self.isIdle = True  
             return
         if self.collide(self.target):
             self.isLeft = self.x >= self.target.x
@@ -234,7 +234,7 @@ class Bot:
     def animate(self):
         global win
         if self.isDead:
-            win.blit(self.pictures['dead'], (self.x, self.y))
+            win.blit(self.pictures['dead'], (self.x, self.y + self.height - 15))
             return
         if self.isLeft:
             if self.isAttacking:
@@ -242,7 +242,7 @@ class Bot:
             elif self.isJump:
                 win.blit(self.pictures['jumpL'][(self.jumpCount + 10) // 7], (self.x, self.y))
             elif self.isIdle:
-                win.blit(self.pictures['idleL'][self.animCount // 5], (self.x, self.y))
+                win.blit(self.pictures['idleL'][self.animCount // (5 if self.friendly else 8)], (self.x, self.y))
                 self.animCount += 1
                 self.animCount %= 30
             else:
@@ -255,7 +255,7 @@ class Bot:
             elif self.isJump:
                 win.blit(self.pictures['jumpR'][(self.jumpCount + 10) // 7], (self.x, self.y))
             elif self.isIdle:
-                win.blit(self.pictures['idleR'][self.animCount // 5], (self.x, self.y))
+                win.blit(self.pictures['idleR'][self.animCount // (5 if self.friendly else 8)], (self.x, self.y))
                 self.animCount += 1
                 self.animCount %= 30
             else:
@@ -324,6 +324,55 @@ narutoImg = {'runR': imgPlayerWalkRight, 'runL': imgPlayerWalkLeft, 'idleR': img
              'idleL': imgPlayerStandLeft,
              'jumpR': imgPlayerJumpRight, 'jumpL': imgPlayerJumpLeft, 'attackR': imgPlayerAttackRight,
              'attackL': imgPlayerAttackLeft, 'dead': imgDead}
+
+imgSNWalkRight = [pygame.image.load('img/enemy_run_right/enemy_run_right_1.png'),
+                      pygame.image.load('img/enemy_run_right/enemy_run_right_2.png'),
+                      pygame.image.load('img/enemy_run_right/enemy_run_right_3.png'),
+                      pygame.image.load('img/enemy_run_right/enemy_run_right_4.png'),
+                      pygame.image.load('img/enemy_run_right/enemy_run_right_5.png'),
+                      pygame.image.load('img/enemy_run_right/enemy_run_right_6.png')]
+imgSNWalkLeft = [pygame.image.load('img/enemy_run_left/enemy_run_left_1.png'),
+                      pygame.image.load('img/enemy_run_left/enemy_run_left_2.png'),
+                      pygame.image.load('img/enemy_run_left/enemy_run_left_3.png'),
+                      pygame.image.load('img/enemy_run_left/enemy_run_left_4.png'),
+                      pygame.image.load('img/enemy_run_left/enemy_run_left_5.png'),
+                      pygame.image.load('img/enemy_run_left/enemy_run_left_6.png')]
+imgSNStandRight = [pygame.image.load('img/enemy_stand_right/enemy_stand_right_1.png'),
+                      pygame.image.load('img/enemy_stand_right/enemy_stand_right_2.png'),
+                      pygame.image.load('img/enemy_stand_right/enemy_stand_right_3.png'),
+                      pygame.image.load('img/enemy_stand_right/enemy_stand_right_4.png')]
+imgSNStandLeft = [pygame.image.load('img/enemy_stand_left/enemy_stand_left_1.png'),
+                      pygame.image.load('img/enemy_stand_left/enemy_stand_left_2.png'),
+                      pygame.image.load('img/enemy_stand_left/enemy_stand_left_3.png'),
+                      pygame.image.load('img/enemy_stand_left/enemy_stand_left_4.png')]
+imgSNAttackRight = [[pygame.image.load('img/enemy_attack_right/enemy_attack_right_1.png'),
+                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_2.png'),
+                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_3.png'),
+                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_4.png')],
+                    [pygame.image.load('img/enemy_attack_right/enemy_attack_right_5.png'),
+                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_6.png'),
+                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_7.png'),
+                     pygame.image.load('img/enemy_attack_right/enemy_attack_right_8.png')],
+                    [pygame.image.load('img/enemy_knife_attack_right/enemy_knife_attack_right_1.png'),
+                     pygame.image.load('img/enemy_knife_attack_right/enemy_knife_attack_right_2.png'),
+                     pygame.image.load('img/enemy_knife_attack_right/enemy_knife_attack_right_3.png'),
+                     pygame.image.load('img/enemy_knife_attack_right/enemy_knife_attack_right_4.png')]]
+imgSNAttackLeft = [[pygame.image.load('img/enemy_attack_left/enemy_attack_left_1.png'),
+                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_2.png'),
+                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_3.png'),
+                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_4.png')],
+                    [pygame.image.load('img/enemy_attack_left/enemy_attack_left_5.png'),
+                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_6.png'),
+                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_7.png'),
+                     pygame.image.load('img/enemy_attack_left/enemy_attack_left_8.png')],
+                    [pygame.image.load('img/enemy_knife_attack_left/enemy_knife_attack_left_1.png'),
+                     pygame.image.load('img/enemy_knife_attack_left/enemy_knife_attack_left_2.png'),
+                     pygame.image.load('img/enemy_knife_attack_left/enemy_knife_attack_left_3.png'),
+                     pygame.image.load('img/enemy_knife_attack_left/enemy_knife_attack_left_4.png')]]
+enemyImg = {'runR': imgSNWalkRight, 'runL': imgSNWalkLeft, 'idleR': imgSNStandRight,
+             'idleL': imgSNStandLeft,
+             'jumpR': imgSNStandRight, 'jumpL': imgSNStandLeft, 'attackR': imgSNAttackRight,
+             'attackL': imgSNAttackLeft, 'dead': pygame.image.load('img/enemy_under_attack_left/enemy_under_attack_left_4.png')}
 imgBackground = pygame.image.load('img/background_konoha.png')
 
 
@@ -342,7 +391,7 @@ while run:
     clock.tick(30)
     enemiesCounter += 1
     if enemiesCounter == 200:
-       objects.append(Bot(narutoImg))
+       objects.append(Bot(enemyImg))
        enemiesCounter = 0
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

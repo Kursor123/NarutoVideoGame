@@ -2,6 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b14334ef-4755-4739-8f75-5900864070af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_left/enemy_attack_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_left/enemy_attack_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_left/enemy_attack_left_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_left/enemy_attack_left_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_left/enemy_attack_left_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_left/enemy_attack_left_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_left/enemy_attack_left_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_left/enemy_attack_left_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_right/enemy_attack_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_right/enemy_attack_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_right/enemy_attack_right_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_right/enemy_attack_right_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_right/enemy_attack_right_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_right/enemy_attack_right_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_right/enemy_attack_right_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_attack_right/enemy_attack_right_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_knife_attack_left/enemy_knife_attack_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_knife_attack_left/enemy_knife_attack_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_knife_attack_left/enemy_knife_attack_left_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_knife_attack_left/enemy_knife_attack_left_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_knife_attack_right/enemy_knife_attack_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_knife_attack_right/enemy_knife_attack_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_knife_attack_right/enemy_knife_attack_right_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_knife_attack_right/enemy_knife_attack_right_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_left/enemy_run_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_left/enemy_run_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_left/enemy_run_left_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_left/enemy_run_left_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_left/enemy_run_left_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_left/enemy_run_left_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_right/enemy_run_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_right/enemy_run_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_right/enemy_run_right_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_right/enemy_run_right_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_right/enemy_run_right_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_run_right/enemy_run_right_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_stand_left/enemy_stand_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_stand_left/enemy_stand_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_stand_left/enemy_stand_left_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_stand_left/enemy_stand_left_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_stand_right/enemy_stand_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_stand_right/enemy_stand_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_stand_right/enemy_stand_right_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_stand_right/enemy_stand_right_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_left/enemy_under_attack_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_left/enemy_under_attack_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_left/enemy_under_attack_left_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_left/enemy_under_attack_left_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_left/enemy_under_attack_left_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_left/enemy_under_attack_left_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_right/enemy_under_attack_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_right/enemy_under_attack_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_right/enemy_under_attack_right_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_right/enemy_under_attack_right_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_right/enemy_under_attack_right_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/enemy_under_attack_right/enemy_under_attack_right_6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution.py" afterDir="false" />
     </list>
@@ -35,13 +91,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1XReEyuRFRR4Vhs4efqnUPciGs8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -120,12 +179,16 @@
       <workItem from="1585429624323" duration="2765000" />
       <workItem from="1585470390453" duration="13391000" />
       <workItem from="1585519870667" duration="1305000" />
-      <workItem from="1585590196357" duration="19053000" />
+      <workItem from="1585590196357" duration="20097000" />
+      <workItem from="1585663360511" duration="1861000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585158925393">
@@ -136,22 +199,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="541" y="223" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1581013599415" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585658018304">
+    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1585665234433">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585658018304" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585658018304">
+    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585665234433" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585665139477">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585658018304" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585658018304">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585665139477" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585665139476">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585658018304" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585658018304">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585665139476" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585665139475">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585658018304" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585665139475" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585665139477">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585665139477" />
     <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1585178237594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -168,10 +235,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585178237594" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585590243172">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585663393518">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585590243172" />
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585663393518" />
+    <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585665217804">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1585665217804" />
     <state x="474" y="46" width="588" height="732" key="find.popup" timestamp="1584205302888">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -183,6 +254,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/untitled$abss.coverage" NAME="solution Coverage Results" MODIFIED="1585177491206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/untitled$solution.coverage" NAME="solution Coverage Results" MODIFIED="1585658018295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/untitled$solution.coverage" NAME="solution Coverage Results" MODIFIED="1585665139433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
