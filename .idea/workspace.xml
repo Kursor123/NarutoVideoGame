@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b14334ef-4755-4739-8f75-5900864070af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +123,8 @@
       <workItem from="1585470390453" duration="13391000" />
       <workItem from="1585519870667" duration="1305000" />
       <workItem from="1585590196357" duration="20097000" />
-      <workItem from="1585663360511" duration="11507000" />
+      <workItem from="1585663360511" duration="11818000" />
+      <workItem from="1585684523617" duration="382000" />
     </task>
     <servers />
   </component>
@@ -148,22 +147,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585665234433" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585681741770">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585682044573">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585681741770" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585681741770">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585682044573" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585682044573">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585681741770" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585681741770">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585682044573" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585682044573">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585681741770" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585681741770">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585682044573" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585682044573">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585681741770" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585682044573" />
     <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1585178237594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -180,10 +179,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585178237594" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585663393518">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585687032398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585663393518" />
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585687032398" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585665217804">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
