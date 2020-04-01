@@ -18,7 +18,7 @@ sound = {'hit': pygame.mixer.Sound('sound/hit.wav'), 'punch': pygame.mixer.Sound
 
 win = pygame.display.set_mode((sizeX, sizeY))
 pygame.display.set_caption('Naruto Shippuden Video Game')
-pygame.mixer.music.load('sound/main_theme.mp3')
+pygame.mixer.music.load('sound/main_theme.wav')
 pygame.mixer.music.play(-1)
 
 
@@ -236,7 +236,7 @@ class Bot:
                     self.attackCount = 0
                     self.attackType = 0
         if not self.isTargetChosen:
-            self.isIdle = True  
+            self.isIdle = True
             return
         if self.collide(self.target):
             self.isLeft = self.x >= self.target.x
