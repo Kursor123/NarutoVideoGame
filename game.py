@@ -18,7 +18,7 @@ sound = {'hit': pygame.mixer.Sound('sound/hit.wav'), 'punch': pygame.mixer.Sound
 
 win = pygame.display.set_mode((sizeX, sizeY))
 pygame.display.set_caption('Naruto Shippuden Video Game')
-pygame.mixer.music.load('sound/main_theme.mp3')
+pygame.mixer.music.load('sound/main_theme.wav')
 pygame.mixer.music.play(-1)
 
 
@@ -236,7 +236,7 @@ class Bot:
                     self.attackCount = 0
                     self.attackType = 0
         if not self.isTargetChosen:
-            self.isIdle = True  
+            self.isIdle = True
             return
         if self.collide(self.target):
             self.isLeft = self.x >= self.target.x
@@ -353,26 +353,26 @@ imgPlayerJumpLeft = [  # pygame.image.load('img/naruto_jump_left/naruto_jump_lef
     pygame.image.load('img/naruto_jump_left/naruto_jump_left_3.png'),
     pygame.image.load('img/naruto_jump_left/naruto_jump_left_4.png'),
     pygame.image.load('img/naruto_jump_left/naruto_jump_left_5.png')]
-imgPlayerAttackRight = [[pygame.image.load('img\\naruto_light_attack_right\\naruto_light_attack_right_1.png'),
-                         pygame.image.load('img\\naruto_light_attack_right\\naruto_light_attack_right_2.png'),
-                         pygame.image.load('img\\naruto_light_attack_right\\naruto_light_attack_right_3.png'),
-                         pygame.image.load('img\\naruto_light_attack_right\\naruto_light_attack_right_4.png')], [pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_1.png'),
-                         pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_2.png'),
-                         pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_3.png'),
-                         pygame.image.load('img\\naruto_head_attack_right\\naruto_head_attack_right_4.png')], [pygame.image.load('img\\naruto_heavy_attack_right\\naruto_heavy_attack_right_1.png'),
-                         pygame.image.load('img\\naruto_heavy_attack_right\\naruto_heavy_attack_right_2.png'),
-                         pygame.image.load('img\\naruto_heavy_attack_right\\naruto_heavy_attack_right_3.png'),
-                         pygame.image.load('img\\naruto_heavy_attack_right\\naruto_heavy_attack_right_4.png')]]
-imgPlayerAttackLeft = [[pygame.image.load('img\\naruto_light_attack_left\\naruto_light_attack_left_1.png'),
-                        pygame.image.load('img\\naruto_light_attack_left\\naruto_light_attack_left_2.png'),
-                        pygame.image.load('img\\naruto_light_attack_left\\naruto_light_attack_left_3.png'),
-                        pygame.image.load('img\\naruto_light_attack_left\\naruto_light_attack_left_4.png')], [pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_1.png'),
-                        pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_2.png'),
-                        pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_3.png'),
-                        pygame.image.load('img\\naruto_head_attack_left\\naruto_head_attack_left_4.png')], [pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_1.png'),
-                        pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_2.png'),
-                        pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_3.png'),
-                        pygame.image.load('img\\naruto_heavy_attack_left\\naruto_heavy_attack_left_4.png')]]
+imgPlayerAttackRight = [[pygame.image.load('img/naruto_light_attack_right/naruto_light_attack_right_1.png'),
+                         pygame.image.load('img/naruto_light_attack_right/naruto_light_attack_right_2.png'),
+                         pygame.image.load('img/naruto_light_attack_right/naruto_light_attack_right_3.png'),
+                         pygame.image.load('img/naruto_light_attack_right/naruto_light_attack_right_4.png')], [pygame.image.load('img/naruto_head_attack_right/naruto_head_attack_right_1.png'),
+                         pygame.image.load('img/naruto_head_attack_right/naruto_head_attack_right_2.png'),
+                         pygame.image.load('img/naruto_head_attack_right/naruto_head_attack_right_3.png'),
+                         pygame.image.load('img/naruto_head_attack_right/naruto_head_attack_right_4.png')], [pygame.image.load('img/naruto_heavy_attack_right/naruto_heavy_attack_right_1.png'),
+                         pygame.image.load('img/naruto_heavy_attack_right/naruto_heavy_attack_right_2.png'),
+                         pygame.image.load('img/naruto_heavy_attack_right/naruto_heavy_attack_right_3.png'),
+                         pygame.image.load('img/naruto_heavy_attack_right/naruto_heavy_attack_right_4.png')]]
+imgPlayerAttackLeft = [[pygame.image.load('img/naruto_light_attack_left/naruto_light_attack_left_1.png'),
+                        pygame.image.load('img/naruto_light_attack_left/naruto_light_attack_left_2.png'),
+                        pygame.image.load('img/naruto_light_attack_left/naruto_light_attack_left_3.png'),
+                        pygame.image.load('img/naruto_light_attack_left/naruto_light_attack_left_4.png')], [pygame.image.load('img/naruto_head_attack_left/naruto_head_attack_left_1.png'),
+                        pygame.image.load('img/naruto_head_attack_left/naruto_head_attack_left_2.png'),
+                        pygame.image.load('img/naruto_head_attack_left/naruto_head_attack_left_3.png'),
+                        pygame.image.load('img/naruto_head_attack_left/naruto_head_attack_left_4.png')], [pygame.image.load('img/naruto_heavy_attack_left/naruto_heavy_attack_left_1.png'),
+                        pygame.image.load('img/naruto_heavy_attack_left/naruto_heavy_attack_left_2.png'),
+                        pygame.image.load('img/naruto_heavy_attack_left/naruto_heavy_attack_left_3.png'),
+                        pygame.image.load('img/naruto_heavy_attack_left/naruto_heavy_attack_left_4.png')]]
 imgPlayerDeadLeft = [pygame.image.load('img/naruto_under_attack_left/naruto_under_attack_left_1.png'),
                      pygame.image.load('img/naruto_under_attack_left/naruto_under_attack_left_2.png'),
                      pygame.image.load('img/naruto_under_attack_left/naruto_under_attack_left_3.png'),

@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b14334ef-4755-4739-8f75-5900864070af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_left/naruto_under_attack_left_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_left/naruto_under_attack_left_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_left/naruto_under_attack_left_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_left/naruto_under_attack_left_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_left/naruto_under_attack_left_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_right/naruto_under_attack_right_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_right/naruto_under_attack_right_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_right/naruto_under_attack_right_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_right/naruto_under_attack_right_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/naruto_under_attack_right/naruto_under_attack_right_5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +47,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
-    <configuration name="solution" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -73,7 +63,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solution.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game.py" />
       <option name="PARAMETERS" value="abs asdnawnd aa" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +74,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.solution" />
+        <item itemvalue="Python.game" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +124,9 @@
       <workItem from="1585470390453" duration="13391000" />
       <workItem from="1585519870667" duration="1305000" />
       <workItem from="1585590196357" duration="20097000" />
-      <workItem from="1585663360511" duration="10522000" />
+      <workItem from="1585663360511" duration="11818000" />
+      <workItem from="1585684523617" duration="382000" />
+      <workItem from="1585868196197" duration="664000" />
     </task>
     <servers />
   </component>
@@ -145,10 +137,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585158925393">
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585681732746">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585158925393" />
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585681732746" />
     <state x="541" y="223" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581013599415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -157,22 +149,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585665234433" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585680909366">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585912740095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585680909366" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585680909366">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585912740095" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585912740094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585680909366" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585680909366">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585912740094" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585912740094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585680909366" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585680909366">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585912740094" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585912740095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585680909366" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585912740095" />
     <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1585178237594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -189,10 +181,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585178237594" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585663393518">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585912597523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585663393518" />
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585912597523" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585665217804">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -201,13 +193,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="474" y="46" width="588" height="732" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1584205302888" />
-    <state x="431" y="145" key="search.everywhere.popup" timestamp="1581013383377">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585868203925">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1581013383377" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585868203925" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/NarutoVideoGame$game.coverage" NAME="game Coverage Results" MODIFIED="1585912740067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$abss.coverage" NAME="solution Coverage Results" MODIFIED="1585177491206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/untitled$solution.coverage" NAME="solution Coverage Results" MODIFIED="1585680909352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/untitled$solution.coverage" NAME="game Coverage Results" MODIFIED="1585681741750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
