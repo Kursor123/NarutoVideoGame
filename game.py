@@ -43,11 +43,25 @@ class Hero:
         # self.uaCount = 0
         self.dmg = 10
         self.speed = 8
+        self.cp = 2000
+
+    def shadow_clone_jutsu(self):
+        if self.cp <= 1500:
+            return
+        amount = random.randint(1, 4)
+        self.cp //= (amount + 1)
+        global narutoImg
+        pygame.mixer.Sound('sound/shadow_clone_jutsu.wav').play()
+        for i in range(amount):
+            objects.append(Bot(narutoImg, friendly=True, x=self.x, lvl=2))
 
     def act(self):
         if self.isDead:
             return
+        self.cp += 1 if self.cp < 3000 else 0
         keys = pygame.key.get_pressed()
+        if keys[pygame.K_k]:
+            self.shadow_clone_jutsu()
         if not self.isAttacking:
             if keys[pygame.K_j]:
                 self.attackCount = 0
@@ -115,10 +129,15 @@ class Hero:
 
     def animate(self):
         global win
-        pygame.draw.rect(win, (255, 0, 0), (20, 20, 300, 10))
+        win.blit(self.pictures['prof'][0], (20, 20))
+        pygame.draw.rect(win, (255, 0, 0), (90, 43, 300, 10))
+        pygame.draw.rect(win, (0, 200, 255), (90, 53, self.cp // 10, 10))
+        pygame.draw.rect(win, (0, 0, 0), (90, 53, self.cp // 10, 10), 1)
         if not self.isDead:
-            pygame.draw.rect(win, (0, 255, 0), (20, 20, self.hp, 10))
-        pygame.draw.rect(win, (0, 0, 0), (20, 20, 300, 10), 1)
+            pygame.draw.rect(win, (0, 255, 0), (90, 43, self.hp, 10))
+            pygame.draw.rect(win, (0, 0, 0), (90, 43, self.hp, 10), 1)
+        pygame.draw.rect(win, (0, 0, 0), (90, 43, 300, 10), 1)
+        pygame.draw.rect(win, (0, 0, 0), (90, 53, 300, 10), 1)
         if self.isDead:
             win.blit(self.pictures['dead{}'.format('L' if self.isLeft else 'R')]
                      [self.deadCount // 6], (self.x + (self.deadCount // 6) * 25,
@@ -144,10 +163,10 @@ class Hero:
 
 
 class Bot:
-    def __init__(self, pictures, friendly=False, lvl=1):
+    def __init__(self, pictures, friendly=False, lvl=1, x = 'nt'):
         self.width = 43
         self.height = 58 if friendly else 43
-        self.x = (sizeX // 2) + (2 * random.randint(0, 1) - 1) * (sizeX // 2 + 50)
+        self.x = (sizeX // 2) + (2 * random.randint(0, 1) - 1) * (sizeX // 2 + 50) if x == 'nt' else x
         self.y = sizeY - self.height - 15
         self.isIdle = True
         self.isLeft = False
@@ -160,13 +179,13 @@ class Bot:
         self.attackType = 0
         self.friendly = friendly
         self.isTargetChosen = False
-        self.hp = 30
+        self.hp = 10 + 20 * lvl
         self.isDead = False
         self.underAttack = False
         self.uaCount = 0
-        self.dmg = 5
         self.lvl = lvl
-        self.speed = 4
+        self.dmg = 5 * lvl
+        self.speed = 4 if lvl < 5 else 6
 
     def chooseTarget(self):
         if self.isTargetChosen:
@@ -224,17 +243,12 @@ class Bot:
         if not self.isTargetChosen:
             self.isIdle = True
             return
-        if self.collide(self.target):
-            self.isLeft = self.x >= self.target.x
-            self.isIdle = True
-        elif self.x <= self.target.x:
-            self.x += (self.speed + 2 * random.randint(0, 1) - 1)
-            self.isLeft = False
-            self.isIdle = False
-        else:
-            self.x -= (self.speed + 2 * random.randint(0, 1) - 1)
-            self.isLeft = True
-            self.isIdle = False
+
+        self.isLeft = (self.x > self.target.x)
+        self.isIdle = self.collide(self.target)
+        self.x += (-1 if self.isLeft else 1) * ((
+            self.speed + 2 * random.randint(0, 1) - 1) *
+            (0 if self.collide(self.target) else 1))
         jumpProb = random.randint(1, 100) <= 2
         if self.isTargetChosen and not self.isJump and jumpProb:
             self.isJump = True
@@ -260,11 +274,11 @@ class Bot:
         global win
         if self.isDead:
             win.blit(self.pictures['dead{}'.format('L' if self.isLeft else 'R')]
-                     [0], (self.x, sizeY - self.height + 15))
+                     [3 if self.friendly else 0], (self.x, sizeY - self.height + 15))
             return
         if self.isAttacking:
             win.blit(self.pictures['attack{}'.format('L' if self.isLeft else 'R')]
-                     [self.attackType][self.attackCount // 3], (self.x, self.y))
+                     [self.attackType][self.attackCount // 2 if self.friendly else 3], (self.x, self.y))
         elif self.underAttack:
             win.blit(self.pictures['und_at{}'.format('L' if self.isLeft else 'R')]
                      [self.uaCount // 10], (self.x, self.y))
@@ -289,7 +303,8 @@ class Bot:
 
 narutoImg = {'runR': [], 'runL': [], 'idleR': [], 'idleL': [],
              'jumpR': [], 'jumpL': [], 'attackR': [[], [], []],
-             'attackL': [[], [], []], 'deadL': [], 'deadR': []}
+             'attackL': [[], [], []], 'deadL': [], 'deadR': [], 'prof': [],
+             'und_atL': [], 'und_atR': []}
 for i in range(6):
     for key in narutoImg.keys():
         try:
@@ -323,7 +338,7 @@ def DrawWindow(objects):
     win.blit(imgBackground, (0, 0))
     for obj in objects:
         obj.animate()
-    win.blit(usedFont.render('Score: ' + str(score), 0, (0, 0, 0)), (20, 40))
+    win.blit(usedFont.render('Score: ' + str(score), 0, (0, 0, 0)), (20, 100))
     if objects[0].isDead:
         win.blit(usedFont.render('GAME OVER! Press ESC to quit', 0, (0, 0, 0)), (100, 90))
     pygame.display.update()
@@ -347,7 +362,7 @@ while run:
             if i < len(objects) and not objects[i].isDead:
                 i += 1
         bodiesCounter = 0
-    if enemiesCounter == 70:
+    if enemiesCounter == 30:
         objects.append(Bot(enemyImg))
         enemiesCounter = 0
     for event in pygame.event.get():
