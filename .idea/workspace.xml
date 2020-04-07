@@ -1,50 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b14334ef-4755-4739-8f75-5900864070af" name="Default Changelist" comment="">
+    <list default="true" id="f8fca595-e128-4356-8ddf-9433ccda831e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1XReEyuRFRR4Vhs4efqnUPciGs8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1aD5MUUSj4hqyEeRvwFV0c62aGN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -52,16 +29,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
-    <configuration name="naruto" type="PythonConfigurationType" factoryName="Python">
-      <module name="untitled" />
+    <configuration name="game" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="NarutoVideoGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\abdulkadyr\AppData\Local\Programs\Python\Python38-32\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -80,139 +57,41 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b14334ef-4755-4739-8f75-5900864070af" name="Default Changelist" comment="" />
-      <created>1581013227347</created>
+      <changelist id="f8fca595-e128-4356-8ddf-9433ccda831e" name="Default Changelist" comment="" />
+      <created>1586257275927</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1581013227347</updated>
-      <workItem from="1581013231285" duration="1984000" />
-      <workItem from="1581016129923" duration="5000" />
-      <workItem from="1581073151082" duration="8506000" />
-      <workItem from="1581345500809" duration="14665000" />
-      <workItem from="1581415040333" duration="1842000" />
-      <workItem from="1581430539931" duration="1108000" />
-      <workItem from="1581597271784" duration="3460000" />
-      <workItem from="1581758118883" duration="12693000" />
-      <workItem from="1581967745702" duration="5459000" />
-      <workItem from="1582806960840" duration="3882000" />
-      <workItem from="1583412637686" duration="3144000" />
-      <workItem from="1583426926116" duration="3216000" />
-      <workItem from="1583873665322" duration="1195000" />
-      <workItem from="1583962474738" duration="414000" />
-      <workItem from="1584016039904" duration="144000" />
-      <workItem from="1584019042262" duration="1486000" />
-      <workItem from="1584038951017" duration="1364000" />
-      <workItem from="1584125955766" duration="6000" />
-      <workItem from="1584205286151" duration="113000" />
-      <workItem from="1584222572907" duration="359000" />
-      <workItem from="1584379747241" duration="4251000" />
-      <workItem from="1584443272065" duration="5676000" />
-      <workItem from="1584513561963" duration="1042000" />
-      <workItem from="1584564930333" duration="931000" />
-      <workItem from="1584623955694" duration="4680000" />
-      <workItem from="1584634774946" duration="1351000" />
-      <workItem from="1584965061901" duration="4000" />
-      <workItem from="1585157769222" duration="401000" />
-      <workItem from="1585158304923" duration="17154000" />
-      <workItem from="1585178593102" duration="365000" />
-      <workItem from="1585208966066" duration="1417000" />
-      <workItem from="1585225684716" duration="601000" />
-      <workItem from="1585429624323" duration="2765000" />
-      <workItem from="1585470390453" duration="13391000" />
-      <workItem from="1585519870667" duration="1305000" />
-      <workItem from="1585590196357" duration="20097000" />
-      <workItem from="1585663360511" duration="11818000" />
-      <workItem from="1585684523617" duration="382000" />
-      <workItem from="1585868196197" duration="664000" />
-      <workItem from="1585913563648" duration="5922000" />
-      <workItem from="1585932191556" duration="4299000" />
-      <workItem from="1585944671981" duration="6908000" />
-      <workItem from="1585952237950" duration="632000" />
-      <workItem from="1586176663021" duration="2174000" />
-      <workItem from="1586250462978" duration="4358000" />
+      <updated>1586257275927</updated>
+      <workItem from="1586257280278" duration="53000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585946858700">
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586257332761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585946858700" />
-    <state x="541" y="223" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581013599415">
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586257332761" />
+    <state x="503" y="54" key="#game" timestamp="1586257316083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="541" y="223" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1581013599415" />
-    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1585665234433">
+    <state x="503" y="54" key="#game/0.0.1536.824@0.0.1536.824" timestamp="1586257316083" />
+    <state x="548" y="170" key="FileChooserDialogImpl" timestamp="1586257304872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585665234433" />
-    <state x="548" y="171" key="FileChooserDialogImpl" timestamp="1585946846131">
+    <state x="548" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586257304872" />
+    <state x="279" y="58" key="SettingsEditor" timestamp="1586257325092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585946846131" />
-    <state width="1493" height="164" key="GridCell.Tab.0.bottom" timestamp="1586256282912">
+    <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586257325092" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1586257282549">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586256282912" />
-    <state width="1493" height="164" key="GridCell.Tab.0.center" timestamp="1586256282912">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586256282912" />
-    <state width="1493" height="164" key="GridCell.Tab.0.left" timestamp="1586256282912">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586256282912" />
-    <state width="1493" height="164" key="GridCell.Tab.0.right" timestamp="1586256282912">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586256282912" />
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1585952187840">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585952187840" />
-    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1585952187839">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1585952187839" />
-    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1585952187839">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1585952187839" />
-    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1585952187840">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585952187840" />
-    <state x="279" y="58" key="SettingsEditor" timestamp="1585945875011">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585945875011" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1586250473662">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586250473662" />
-    <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585665217804">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1585665217804" />
-    <state x="474" y="46" width="588" height="732" key="find.popup" timestamp="1584205302888">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="474" y="46" width="588" height="732" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1584205302888" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585868203925">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585868203925" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586257282549" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NarutoVideoGame$game.coverage" NAME="naruto Coverage Results" MODIFIED="1585951768538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/untitled$abss.coverage" NAME="solution Coverage Results" MODIFIED="1585177491206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/untitled$solution.coverage" NAME="game Coverage Results" MODIFIED="1585681741750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NarutoVideoGame$naruto.coverage" NAME="naruto Coverage Results" MODIFIED="1586256197667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NarutoVideoGame$game.coverage" NAME="game Coverage Results" MODIFIED="1586257333592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
