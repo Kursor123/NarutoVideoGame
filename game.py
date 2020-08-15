@@ -19,6 +19,31 @@ pygame.display.set_caption('Naruto Shippuden Video Game')
 pygame.mixer.music.load('sound/main_theme.wav')
 pygame.mixer.music.play(-1)
 
+
+class CharState:
+    pass
+
+
+class IdleCharState(CharState):
+    pass
+
+
+class JumpCharState(CharState):
+    pass
+
+
+class RunCharState(CharState):
+    pass
+
+
+class UnderAttackCharState(CharState):
+    pass
+
+
+class DeadCharState(CharState):
+    pass
+
+
 class Character:
     def __init__(self, pictures, x, friendly, hp, speed):
         self.pictures = pictures
@@ -133,6 +158,7 @@ class Character:
             self.animCount += 1
             self.animCount %= 30
 
+
 class Hero(Character):
     def __init__(self, pictures, x=50, friendly=True):
         super().__init__(pictures, x, friendly, 300, 8)
@@ -186,7 +212,7 @@ class Hero(Character):
 
 
 class Bot(Character):
-    def __init__(self, pictures, friendly=False, lvl=1, x = 'nt'):
+    def __init__(self, pictures, friendly=False, lvl=1, x='nt'):
         self.lvl = lvl
         self.dmg = 5 * lvl
         self.isTargetChosen = False
@@ -225,7 +251,7 @@ class Bot(Character):
         self.isLeft = (self.x > self.target.x)
         self.isIdle = self.collide(self.target)
         self.x += (-1 if self.isLeft else 1) * (0 if self.isIdle else 1) * (
-            self.speed + 2 * random.randint(0, 1) - 1)
+                self.speed + 2 * random.randint(0, 1) - 1)
 
         jumpProb = random.randint(1, 200) <= 3
         cnd = self.isTargetChosen and not self.isJump and jumpProb
@@ -305,6 +331,6 @@ while run:
     for obj in objects:
         obj.act()
     DrawWindow(objects)
-    if (pygame.key.get_pressed()[pygame.K_ESCAPE]):
+    if pygame.key.get_pressed()[pygame.K_ESCAPE]:
         pygame.quit()
         break

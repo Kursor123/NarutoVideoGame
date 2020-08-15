@@ -1,29 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8fca595-e128-4356-8ddf-9433ccda831e" name="Default Changelist" comment="" />
+    <list default="true" id="f8fca595-e128-4356-8ddf-9433ccda831e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NarutoVideoGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NarutoVideoGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="b0cd3aa1-d154-45da-9992-90970392a4bc" />
   <component name="ProjectId" id="1aD5MUUSj4hqyEeRvwFV0c62aGN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/game.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled/test.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abdulkadyr\PycharmProjects\WebApp\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.game">
+    <configuration name="DIMAS" type="PythonConfigurationType" factoryName="Python">
+      <module name="NarutoVideoGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\abdulkadyr\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../untitled" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../untitled/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WebApp" type="PythonConfigurationType" factoryName="Python">
+      <module name="NarutoVideoGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\abdulkadyr\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../WebApp" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../WebApp/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WebAppTest" type="PythonConfigurationType" factoryName="Python">
+      <module name="NarutoVideoGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\abdulkadyr\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../WebApp" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../WebApp/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="game" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="NarutoVideoGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -46,7 +133,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="solution" type="PythonConfigurationType" factoryName="Python">
+      <module name="NarutoVideoGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\abdulkadyr\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../contests" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../contests/solution.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.DIMAS" />
+      <item itemvalue="Python.WebAppTest" />
+      <item itemvalue="Python.WebApp" />
+      <item itemvalue="Python.game" />
+      <item itemvalue="Python.solution" />
+    </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -57,52 +174,94 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586257275927</updated>
-      <workItem from="1586257280278" duration="419000" />
+      <workItem from="1586257280278" duration="477000" />
+      <workItem from="1586798193450" duration="81000" />
+      <workItem from="1586798336870" duration="336000" />
+      <workItem from="1586964723191" duration="13266000" />
+      <workItem from="1587027910975" duration="9703000" />
+      <workItem from="1587051781596" duration="11733000" />
+      <workItem from="1587112487323" duration="9324000" />
+      <workItem from="1587137519212" duration="964000" />
+      <workItem from="1587138507799" duration="501000" />
+      <workItem from="1587143686997" duration="3169000" />
+      <workItem from="1587583790214" duration="7149000" />
+      <workItem from="1587591274655" duration="2945000" />
+      <workItem from="1587929134016" duration="691000" />
+      <workItem from="1588101086954" duration="31097000" />
+      <workItem from="1588189504385" duration="237000" />
+      <workItem from="1588190779747" duration="413000" />
+      <workItem from="1588358969740" duration="484000" />
+      <workItem from="1588359907171" duration="1374000" />
+      <workItem from="1588531914181" duration="1709000" />
+      <workItem from="1588604982961" duration="357000" />
+      <workItem from="1588605599785" duration="46000" />
+      <workItem from="1589330852094" duration="600000" />
+      <workItem from="1589742383509" duration="35000" />
+      <workItem from="1589742468753" duration="1169000" />
+      <workItem from="1589744735480" duration="115000" />
+      <workItem from="1589921026189" duration="61000" />
+      <workItem from="1590591808453" duration="110000" />
+      <workItem from="1592908100075" duration="42000" />
+      <workItem from="1594420251972" duration="325000" />
+      <workItem from="1595688845207" duration="121000" />
+      <workItem from="1595689107029" duration="747000" />
+      <workItem from="1595962173458" duration="20000" />
+      <workItem from="1596103732085" duration="104000" />
+      <workItem from="1596103919897" duration="1101000" />
+      <workItem from="1597174431486" duration="837000" />
+      <workItem from="1597227872107" duration="4275000" />
+      <workItem from="1597422145251" duration="1199000" />
+      <workItem from="1597434761568" duration="2448000" />
+      <workItem from="1597533858696" duration="397000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586257332761">
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596103787631">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586257332761" />
-    <state x="503" y="54" key="#game" timestamp="1586257316083">
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1596103787631" />
+    <state width="1493" height="127" key="GridCell.Tab.0.bottom" timestamp="1597487129794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="503" y="54" key="#game/0.0.1536.824@0.0.1536.824" timestamp="1586257316083" />
-    <state x="548" y="170" key="FileChooserDialogImpl" timestamp="1586257304872">
+    <state width="1493" height="127" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597487129794" />
+    <state width="1493" height="127" key="GridCell.Tab.0.center" timestamp="1597487129794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586257304872" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586257695922">
+    <state width="1493" height="127" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597487129794" />
+    <state width="1493" height="127" key="GridCell.Tab.0.left" timestamp="1597487129794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586257695922" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586257695922">
+    <state width="1493" height="127" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597487129794" />
+    <state width="1493" height="127" key="GridCell.Tab.0.right" timestamp="1597487129794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586257695922" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586257695921">
+    <state width="1493" height="127" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597487129794" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1597244431534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586257695921" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586257695922">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597244431534" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1597244431533">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586257695922" />
-    <state x="279" y="58" key="SettingsEditor" timestamp="1586257325092">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1597244431533" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1597244431533">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586257325092" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1586257282549">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1597244431533" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1597244431533">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586257282549" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1597244431533" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NarutoVideoGame$game.coverage" NAME="game Coverage Results" MODIFIED="1586257695899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NarutoVideoGame$DIMAS.coverage" NAME="DIMAS Coverage Results" MODIFIED="1588605318305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled" />
+    <SUITE FILE_PATH="coverage/NarutoVideoGame$game.coverage" NAME="game Coverage Results" MODIFIED="1597434761697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NarutoVideoGame$WebApp.coverage" NAME="WebApp Coverage Results" MODIFIED="1589743201730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../WebApp" />
+    <SUITE FILE_PATH="coverage/NarutoVideoGame$WebAppTest.coverage" NAME="WebAppTest Coverage Results" MODIFIED="1588605603568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../WebApp" />
+    <SUITE FILE_PATH="coverage/NarutoVideoGame$solution.coverage" NAME="solution Coverage Results" MODIFIED="1589921073612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../contests" />
   </component>
 </project>
